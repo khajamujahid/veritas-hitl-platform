@@ -12,7 +12,6 @@ services:
       - key: PYTHON_VERSION
         value: "3.11.0"
     healthCheckPath: /api/health
-    plan: individual
 
   - type: web
     name: veritas-dashboard
@@ -23,4 +22,3 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
-    plan: static
