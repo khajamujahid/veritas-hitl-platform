@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+
+# Environment variables (NEVER push API keys)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Uploads and generated files
+uploads/
+forensic_output/
+analysis_results/
+test_image.jpg
+test_video.mp4
+heavily_manipulated.jpg
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

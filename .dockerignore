@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.git/
+.gitignore
+node_modules/
+frontend/node_modules/
+*.md
+test_*.py
+test_*.jpg
+test_*.mp4
+heavily_manipulated.jpg
+uploads/
+forensic_output/
+analysis_results/

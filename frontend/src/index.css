@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #04d9ff;
+  --neon-green: #39ff14;
+  --neon-red: #ff073a;
+  --bg-dark: #0a0e17;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  color: #e2e8f0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #04d9ff33;
+  border-radius: 3px;
+}
+
+.neon-border {
+  border: 1px solid #04d9ff33;
+  box-shadow: 0 0 5px #04d9ff22, inset 0 0 5px #04d9ff11;
+}
+.neon-border:hover {
+  border-color: #04d9ff88;
+  box-shadow: 0 0 15px #04d9ff44, inset 0 0 10px #04d9ff22;
+}
+
+.neon-text {
+  text-shadow: 0 0 7px #04d9ff, 0 0 10px #04d9ff, 0 0 21px #04d9ff;
+}
+
+.glass-panel {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(4, 217, 255, 0.15);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(4, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.claim-card {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+.claim-card:hover {
+  transform: translateX(4px);
+  border-left-color: #04d9ff;
+}
+.claim-card.verified {
+  border-left-color: #39ff14;
+}
+.claim-card.debunked {
+  border-left-color: #ff073a;
+}
+.claim-card.unverified {
+  border-left-color: #fff01f;
+}
+
+@keyframes loading-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.loading-dot {
+  animation: loading-pulse 1.4s ease-in-out infinite;
+}
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
